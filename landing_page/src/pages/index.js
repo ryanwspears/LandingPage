@@ -35,7 +35,7 @@ export default function Home() {
 
 							<form className={styles.signUpForm} name={'emailCapture'} method={'POST'} data-netlify='true'>
 								<input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
-								<button type='submit' onClick={updateTable}>
+								<button type='button' onClick={updateTable}>
 									Claim
 								</button>
 							</form>
