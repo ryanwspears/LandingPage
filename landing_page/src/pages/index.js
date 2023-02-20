@@ -40,7 +40,7 @@ export default function Home() {
 										Don&apos;t fill this out: <input name='bot-field' />
 									</label>
 								</p>
-								<button type='button' onClick={updateTable}>
+								<button type='submit' onClick={updateTable}>
 									Claim
 								</button>
 							</form>
