@@ -33,7 +33,7 @@ export default function Home() {
             <>
             <p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
 
-            <form className={styles.signUpForm} netlify>
+            <form className={styles.signUpForm} name={'emailCapture'} method={"POST"} netlify>
               <input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
               <button type='submit' onClick={updateTable}>Claim</button>
             </form>
