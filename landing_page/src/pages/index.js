@@ -4,7 +4,6 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import axios from 'axios'
 import { useState } from 'react'
-import pool from 'config/db'
 
 export default function Home() {
 
