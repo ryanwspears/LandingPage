@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('/Agrandir-Thin.ttf');
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Agrandir';
+  background-color: #b99976;
+  margin: 0;
+  padding: 0;
+  color: #ffffea;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1441px) {
+  h1 {
+    font-size: 5rem;
+  }
+}

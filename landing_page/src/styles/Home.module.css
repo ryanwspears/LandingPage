@@ -1,0 +1,121 @@
+.signUpForm button:hover {
+  background-color: #b99976;
+  color: #ffffea;
+  border: solid #ffffea;
+}
+.logoImg {
+  animation-name: dropIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.head h1, .head p, .signUpForm input, .signUpForm button {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1440px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+  .head p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .signUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .signUpForm input {
+    background-color: #b99976;
+    outline: solid #ffffea;
+    border: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 80%;
+    color: #ffffea;
+    font-size: 1rem;
+  }
+  .signUpForm button {
+    width: 40%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    background-color: #ffffea;
+    color: #b99976;
+    border: none;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+  .head p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 2rem;
+  }
+  .signUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .signUpForm input {
+    background-color: #b99976;
+    outline: solid #ffffea;
+    border: none;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    width: 80%;
+    color: #ffffea;
+    font-size: 2rem;
+  }
+  .signUpForm button {
+    width: 40%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    background-color: #ffffea;
+    color: #b99976;
+    border: none;
+    cursor: pointer;
+  }
+  .logoImg {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .logoImg {
+    width: 90%;
+  }
+}
+
+@keyframes dropIn {
+  0% {margin-top: -50%;}
+  100% {margin-top: 0;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
