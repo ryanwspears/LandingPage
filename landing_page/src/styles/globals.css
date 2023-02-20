@@ -29,6 +29,10 @@ h1 {
   font-size: 3rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 1441px) {
   h1 {
     font-size: 5rem;

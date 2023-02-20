@@ -3,14 +3,17 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import axios from 'axios'
-import { useState } from 'react'
+import { use, useState } from 'react'
 
 export default function Home() {
 
   var [email, setEmail] = useState()
 
+  var [submitted, setSubmitted] = useState(false)
+
   async function updateTable() {
-    
+    setSubmitted(true)
+    console.log(email)
   }
 
   return (
@@ -26,12 +29,21 @@ export default function Home() {
 					<img className={styles.logoImg} src={'/logo.png'} />
           <h1>Website Coming Soon!</h1>
           <p>Thank you shopping with us!</p>
-          <p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
+          {!submitted ? 
+            <>
+            <p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
 
-          <form className={styles.signUpForm}>
-            <input type={'email'} onChange={(e) => setEmail(e.target.value)} />
-            <button type='submit' onClick={updateTable}>Claim</button>
-          </form>
+            <form className={styles.signUpForm}>
+              <input type={'email'} onChange={(e) => setEmail(e.target.value)} />
+              <button type='submit' onClick={updateTable}>Claim</button>
+            </form>
+            </>
+          :
+            <div>
+              <h3 style={{marginTop: '2rem', marginBottom: '2rem'}}>Thanks! Click the button below to download your free E-Book.</h3>  
+              <a className={styles.downloadBtn} href='/coffee_collection.pdf' download>Download FREE E-Book</a>
+            </div>
+          }
 				</div>
 			</main>
 		</>
