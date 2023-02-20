@@ -13,7 +13,6 @@ export default function Home() {
 
   async function updateTable() {
     setSubmitted(true)
-    console.log(email)
   }
 
   return (
@@ -34,7 +33,13 @@ export default function Home() {
 							<p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
 
 							<form className={styles.signUpForm} name={'emailCapture'} method={'POST'} data-netlify='true'>
+								<input type='hidden' name='form-name' value='emailCapture' />
 								<input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
+								<p hidden>
+									<label>
+										Don&apos;t fill this out: <input name='bot-field' />
+									</label>
+								</p>
 								<button type='button' onClick={updateTable}>
 									Claim
 								</button>
