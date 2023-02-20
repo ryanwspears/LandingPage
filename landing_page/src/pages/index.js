@@ -11,7 +11,8 @@ export default function Home() {
 
   var [submitted, setSubmitted] = useState(false)
 
-  async function submitForm() {
+  const submitForm = (e) => {
+    e.preventDefault()
     setSubmitted(true)
   }
 
