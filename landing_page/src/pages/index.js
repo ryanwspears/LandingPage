@@ -11,7 +11,7 @@ export default function Home() {
 
   var [submitted, setSubmitted] = useState(false)
 
-  async function updateTable() {
+  async function submitForm() {
     setSubmitted(true)
   }
 
@@ -32,7 +32,7 @@ export default function Home() {
 						<>
 							<p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
 
-							<form className={styles.signUpForm} name={'emails'} method={'POST'} data-netlify='true' netlify-honeypot='bot-field'>
+							<form className={styles.signUpForm} name={'emails'} method={'POST'} data-netlify='true' netlify-honeypot='bot-field' onSubmit={submitForm}>
 								<input type='hidden' name='form-name' value='emails' />
 								<input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
 								<p hidden>
@@ -40,7 +40,7 @@ export default function Home() {
 										Don&apos;t fill this out: <input name='bot-field' />
 									</label>
 								</p>
-								<button type='submit' onClick={updateTable}>
+								<button type='submit'>
 									Claim
 								</button>
 							</form>
