@@ -27,23 +27,27 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.head}>
 					<img className={styles.logoImg} src={'/logo.png'} />
-          <h1>Website Coming Soon!</h1>
-          <p>Thank you shopping with us!</p>
-          {!submitted ? 
-            <>
-            <p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
+					<h1>Website Coming Soon!</h1>
+					<p>Thank you shopping with us!</p>
+					{!submitted ? (
+						<>
+							<p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
 
-            <form className={styles.signUpForm} name={'emailCapture'} method={"POST"} netlify>
-              <input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
-              <button type='submit' onClick={updateTable}>Claim</button>
-            </form>
-            </>
-          :
-            <div>
-              <h3 style={{marginTop: '2rem', marginBottom: '2rem'}}>Thanks! Click the button below to download your free E-Book.</h3>  
-              <a className={styles.downloadBtn} href='/coffee_collection.pdf' download>Download FREE E-Book</a>
-            </div>
-          }
+							<form className={styles.signUpForm} name={'emailCapture'} method={'POST'} data-netlify='true'>
+								<input type={'email'} name={'email'} onChange={(e) => setEmail(e.target.value)} />
+								<button type='submit' onClick={updateTable}>
+									Claim
+								</button>
+							</form>
+						</>
+					) : (
+						<div>
+							<h3 style={{ marginTop: '2rem', marginBottom: '2rem' }}>Thanks! Click the button below to download your free E-Book.</h3>
+							<a className={styles.downloadBtn} href='/coffee_collection.pdf' download>
+								Download FREE E-Book
+							</a>
+						</div>
+					)}
 				</div>
 			</main>
 		</>
