@@ -16,7 +16,7 @@ export default function Home() {
 					<img className={styles.logoImg} src={'/logo.png'} />
 					<h1>Website Coming Soon!</h1>
 					<p>Thank you shopping with us!</p>
-					<p>Claim Your Free E-Book Now by Entrering Your Email Below</p>
+					<p>Claim Your Free E-Book Now by Entering Your Email Below</p>
 					<form className={styles.signUpForm} name={'emails'} method={'POST'} data-netlify='true' netlify-honeypot='bot-field' action='/success'>
 						<input type='hidden' name='form-name' value='emails' />
 						<input type={'email'} name={'email'} />
